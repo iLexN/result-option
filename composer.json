@@ -1,9 +1,9 @@
 {
-    "name": "ilexn/package-name",
+    "name": "ilexn/result-option",
     "type": "library",
-    "description": "package-name",
+    "description": "rust like result and option",
     "license": "MIT",
-    "keywords": ["package-name"],
+    "keywords": ["result-enum"],
     "authors": [
         {
             "name": "iLexN",
@@ -35,6 +35,7 @@
         }
     },
     "scripts": {
+        "test": "phpunit --testdox",
         "test-test": "vendor/bin/infection --threads=4",
         "bug-check": "phpstan analyse -l max src",
         "psalm": "psalm",
