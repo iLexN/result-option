@@ -181,7 +181,6 @@ class NoneTest extends TestCase
 
     public function testAndThen(): void{
         $sq = static fn($x) => Option::some($x * $x);
-        $nope = static fn($x) => Option::none();
 
         $x = Option::none();
         $y = $x->andThen($sq)->andThen($sq);
