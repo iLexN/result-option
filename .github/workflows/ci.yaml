@@ -73,8 +73,8 @@ jobs:
 #      - name: Code style check
 #        run: composer cs-check
 
-      - name: PhpStan check
-        run: composer bug-check
+#      - name: PhpStan check
+#        run: composer bug-check
 
       - name: Psalm check
         run: composer psalm
