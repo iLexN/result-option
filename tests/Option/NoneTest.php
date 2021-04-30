@@ -161,6 +161,33 @@ class NoneTest extends TestCase
         $fn = [$this, 'callFn2'];
         self::assertEquals(2, $x->unwrapOrElse($fn));
     }
+
+    /**
+     * @dataProvider data
+     * @testdox Returns [None] if the option is [None], otherwise returns input.
+     */
+    public function testAnd(mixed $value): void
+    {
+        $x = Option::none();
+        $y = Option::none();
+
+        $z = $x->and($y);
+        self::assertEquals(true, $z->isNone());
+
+        $y = Option::some($value);
+        $z = $x->and($y);
+        self::assertEquals(true, $z->isNone());
+    }
+
+    public function testAndThen(): void{
+        $sq = static fn($x) => Option::some($x * $x);
+        $nope = static fn($x) => Option::none();
+
+        $x = Option::none();
+        $y = $x->andThen($sq)->andThen($sq);
+        self::assertEquals(true, $y->isNone());
+    }
+
     /**
      * @testdox filter() Returns [None] if the option is [None]
      */
