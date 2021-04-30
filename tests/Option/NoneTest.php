@@ -217,6 +217,7 @@ class NoneTest extends TestCase
 
     /**
      * @testdox flatten() Converts from Option<Option<T>> to Option<T>
+     * @throws \Ilex\PackageName\Error\OptionException
      */
     public function testFlatten(): void
     {
