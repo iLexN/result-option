@@ -31,9 +31,9 @@ class Result
         return new self($value, true);
     }
 
-    public static function makeErr(\Throwable $error): self
+    public static function makeErr(\Throwable $throwable): self
     {
-        return new self($error, false);
+        return new self($throwable, false);
     }
 
     public function isOk(): bool

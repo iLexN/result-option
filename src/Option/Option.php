@@ -196,11 +196,7 @@ final class Option
      */
     public function replace(mixed $value): Option
     {
-        if ($this->isSome) {
-            $old = self::some($this->value);
-        } else {
-            $old = self::none();
-        }
+        $old = $this->isSome ? self::some($this->value) : self::none();
 
         $this->toSome($value);
         return $old;

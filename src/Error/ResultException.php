@@ -8,15 +8,15 @@ final class ResultException extends \Exception
 
     public static function customMessage(
         string $message,
-        \Throwable $error = null
+        \Throwable $throwable = null
     ): self {
-        return new self(message: $message, previous: $error);
+        return new self(message: $message, previous: $throwable);
     }
 
-    public static function unwrap(\Throwable $error): self
+    public static function unwrap(\Throwable $throwable): self
     {
         $message = 'called `Result::unwrap()` on an `Err` value';
-        return new self(message: $message, previous: $error);
+        return new self(message: $message, previous: $throwable);
     }
 
     public static function unwrapErr(): self
