@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Ilex\PackageName\Result;
+namespace Ilex\ResultOption\Result;
 
-use Ilex\PackageName\Error\ResultException;
-use Ilex\PackageName\Option\Option;
+use Ilex\ResultOption\Error\ResultException;
+use Ilex\ResultOption\Option\Option;
 
 /**
  * @template T
@@ -91,7 +91,7 @@ class Result
 
     /**
      * @return T
-     * @throws \Ilex\PackageName\Error\ResultException
+     * @throws \Ilex\ResultOption\Error\ResultException
      */
     public function expect(string $message): mixed
     {
@@ -107,7 +107,7 @@ class Result
 
     /**
      * @return T
-     * @throws \Ilex\PackageName\Error\ResultException
+     * @throws \Ilex\ResultOption\Error\ResultException
      */
     public function unwrap(): mixed
     {
@@ -126,7 +126,7 @@ class Result
      * @param string $message
      *
      * @return T
-     * @throws \Ilex\PackageName\Error\ResultException
+     * @throws \Ilex\ResultOption\Error\ResultException
      */
     public function expectErr(string $message)
     {
@@ -138,7 +138,7 @@ class Result
 
     /**
      * @return T
-     * @throws \Ilex\PackageName\Error\ResultException
+     * @throws \Ilex\ResultOption\Error\ResultException
      */
     public function unwrap_err(): \Throwable
     {

@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Ilex\PackageName\Tests\Option;
+namespace Ilex\ResultOption\Tests\Option;
 
 trait SimpleData
 {
 
-    public function data()
+    public function data(): \Generator
     {
         yield 'null' => [null];
         yield 'int' => [2];

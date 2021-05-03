@@ -1,9 +1,9 @@
 <?php
 
-namespace Ilex\PackageName\Tests\Option;
+namespace Ilex\ResultOption\Tests\Option;
 
-use Ilex\PackageName\Error\OptionException;
-use Ilex\PackageName\Option\Option;
+use Ilex\ResultOption\Error\OptionException;
+use Ilex\ResultOption\Option\Option;
 use PHPUnit\Framework\TestCase;
 
 class NoneTest extends TestCase
@@ -201,7 +201,7 @@ class NoneTest extends TestCase
     /**
      * @testdox replace() Replaces the actual value in the option
      *
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testReplace(): void
     {
@@ -217,7 +217,7 @@ class NoneTest extends TestCase
 
     /**
      * @testdox flatten() Converts from Option<Option<T>> to Option<T>
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testFlatten(): void
     {

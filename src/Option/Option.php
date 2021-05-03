@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Ilex\PackageName\Option;
+namespace Ilex\ResultOption\Option;
 
-use Ilex\PackageName\Error\OptionException;
+use Ilex\ResultOption\Error\OptionException;
 
 /**
  * @template T
@@ -72,7 +72,7 @@ final class Option
 
     /**
      * @return T
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function expect(string $message): mixed
     {
@@ -84,7 +84,7 @@ final class Option
 
     /**
      * @return T
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function unwrap(): mixed
     {
@@ -140,7 +140,7 @@ final class Option
     /**
      * @param callable(T):Option $callable
      *
-     * @return \Ilex\PackageName\Option\Option
+     * @return \Ilex\ResultOption\Option\Option
      */
     public function andThen(callable $callable): Option
     {
@@ -155,7 +155,7 @@ final class Option
     /**
      * @param callable(T):bool $callable
      *
-     * @return \Ilex\PackageName\Option\Option
+     * @return \Ilex\ResultOption\Option\Option
      */
     public function filter(callable $callable): Option
     {

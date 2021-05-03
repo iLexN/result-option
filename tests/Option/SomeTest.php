@@ -1,9 +1,9 @@
 <?php
 
-namespace Ilex\PackageName\Tests\Option;
+namespace Ilex\ResultOption\Tests\Option;
 
-use Ilex\PackageName\Error\OptionException;
-use Ilex\PackageName\Option\Option;
+use Ilex\ResultOption\Error\OptionException;
+use Ilex\ResultOption\Option\Option;
 use PHPUnit\Framework\TestCase;
 
 class SomeTest extends TestCase
@@ -60,7 +60,7 @@ class SomeTest extends TestCase
     /**
      * @dataProvider data
      * @testdox from() return Some
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testFrom(mixed $value): void
     {
@@ -117,7 +117,7 @@ class SomeTest extends TestCase
      *
      * @param mixed $value
      *
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testExpect(mixed $value): void
     {
@@ -131,7 +131,7 @@ class SomeTest extends TestCase
      *
      * @param mixed $value
      *
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testUnwrap(mixed $value): void
     {
@@ -169,7 +169,7 @@ class SomeTest extends TestCase
      * @dataProvider data
      * @testdox Returns [None] if the option is [None], otherwise returns input.
      *
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testAnd(mixed $value): void
     {
@@ -189,7 +189,7 @@ class SomeTest extends TestCase
     /**
      * @testdox Returns [None] if the option is [None], otherwise calls f with
      *     the wrapped value and returns the result.
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testAndThen(): void
     {
@@ -211,7 +211,7 @@ class SomeTest extends TestCase
     /**
      * @testdox filter() Returns [None] if the option is [None], otherwise calls
      *     predicate with the wrapped value and returns.
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testFilter(): void
     {
@@ -232,7 +232,7 @@ class SomeTest extends TestCase
      * @dataProvider data
      * @testdox replace() Replaces the actual value in the option by the value
      *
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testReplace(mixed $value): void
     {
@@ -248,7 +248,7 @@ class SomeTest extends TestCase
     /**
      * @dataProvider data
      * @testdox flatten() Converts from Option<Option<T>> to Option<T>
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testFlatten(mixed $value): void
     {

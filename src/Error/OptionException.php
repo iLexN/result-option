@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Ilex\PackageName\Error;
+namespace Ilex\ResultOption\Error;
 
 final class OptionException extends \Exception
 {

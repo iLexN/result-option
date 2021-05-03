@@ -1,10 +1,10 @@
 <?php
 
-namespace Ilex\PackageName\Tests\Result;
+namespace Ilex\ResultOption\Tests\Result;
 
-use Ilex\PackageName\Error\OptionException;
-use Ilex\PackageName\Error\ResultException;
-use Ilex\PackageName\Result\Result;
+use Ilex\ResultOption\Error\OptionException;
+use Ilex\ResultOption\Error\ResultException;
+use Ilex\ResultOption\Result\Result;
 use PHPUnit\Framework\TestCase;
 
 /**

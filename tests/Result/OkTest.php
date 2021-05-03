@@ -1,10 +1,10 @@
 <?php
 
-namespace Ilex\PackageName\Tests\Result;
+namespace Ilex\ResultOption\Tests\Result;
 
-use Ilex\PackageName\Error\ResultException;
-use Ilex\PackageName\Result\Result;
-use Ilex\PackageName\Tests\Option\SimpleData;
+use Ilex\ResultOption\Error\ResultException;
+use Ilex\ResultOption\Result\Result;
+use Ilex\ResultOption\Tests\Option\SimpleData;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -44,7 +44,7 @@ class OkTest extends TestCase
 
     /**
      * @dataProvider data
-     * @throws \Ilex\PackageName\Error\ResultException
+     * @throws \Ilex\ResultOption\Error\ResultException
      */
     public function testUnwrap(mixed $value): void
     {
@@ -90,7 +90,7 @@ class OkTest extends TestCase
 
     /**
      * @dataProvider data
-     * @throws \Ilex\PackageName\Error\OptionException
+     * @throws \Ilex\ResultOption\Error\OptionException
      */
     public function testOk(mixed $value): void
     {
