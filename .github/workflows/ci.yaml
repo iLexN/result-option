@@ -82,7 +82,7 @@ jobs:
       - name: Rector check
         run: composer rector-check
 
-#      - name: Infection check
-#        env:
-#          INFECTION_BADGE_API_KEY: ${{ secrets.INFECTION_BADGE_API_KEY }}
-#        run: vendor/bin/infection --threads=4 -s
+      - name: Infection check
+        env:
+          INFECTION_BADGE_API_KEY: ${{ secrets.INFECTION_BADGE_API_KEY }}
+        run: vendor/bin/infection --threads=4 -s

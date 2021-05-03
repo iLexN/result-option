@@ -1,9 +1,9 @@
 {
     "name": "ilexn/result-option",
     "type": "library",
-    "description": "rust like result and option",
+    "description": "Rust like enum Result and Option.",
     "license": "MIT",
-    "keywords": ["result-enum"],
+    "keywords": ["result","option","enum"],
     "authors": [
         {
             "name": "iLexN",
