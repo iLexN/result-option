@@ -1,5 +1,5 @@
 # Result-Option
-> Just for fun, rust like enum Result and Option.
+> Just for fun, Just fell Rust, Rust like enum Result and Option.
 
 [![Latest Stable Version](https://poser.pugx.org/ilexn/result-option/v/stable)](https://packagist.org/packages/ilexn/result-option)
 [![Total Downloads](https://poser.pugx.org/ilexn/result-option/downloads)](https://packagist.org/packages/ilexn/result-option)
