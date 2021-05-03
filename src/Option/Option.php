@@ -7,7 +7,6 @@ use Ilex\ResultOption\Error\OptionException;
 
 /**
  * @template T
- * @template T2
  */
 final class Option
 {
@@ -24,17 +23,26 @@ final class Option
     /**
      * @template T3
      * @param T3 $value
+     * @return \Ilex\ResultOption\Option\Option<T3>
      */
     public static function some(mixed $value): self
     {
         return new self(true, $value);
     }
 
+    /**
+     * @template T3
+     * @return \Ilex\ResultOption\Option\Option<T3>
+     */
     public static function none(): self
     {
         return new self(false, null);
     }
 
+    /**
+     * @template T3
+     * @return \Ilex\ResultOption\Option\Option<T3>
+     */
     public static function default(): self
     {
         return self::none();
@@ -43,6 +51,7 @@ final class Option
     /**
      * @template T3
      * @param T3 $value
+     * @return \Ilex\ResultOption\Option\Option<T3>
      */
     public static function from(mixed $value): self
     {
@@ -60,7 +69,7 @@ final class Option
     }
 
     /**
-     * @param T2|T $value
+     * @param T $value
      */
     public function contains(mixed $value): bool
     {
@@ -86,7 +95,7 @@ final class Option
      * @return T
      * @throws \Ilex\ResultOption\Error\OptionException
      */
-    public function unwrap(): mixed
+    public function unwrap():mixed
     {
         if ($this->isSome()) {
             return $this->value;
@@ -95,9 +104,9 @@ final class Option
     }
 
     /**
-     * @param T2 $value
+     * @param T $value
      *
-     * @return T|T2
+     * @return T
      */
     public function unwrapOr(mixed $value): mixed
     {
@@ -128,6 +137,11 @@ final class Option
     //        //todo
     //    }
 
+    /**
+     * @param \Ilex\ResultOption\Option\Option<T> $option
+     *
+     * @return \Ilex\ResultOption\Option\Option<T>
+     */
     public function and(self $option): Option
     {
         if ($this->isSome()) {
@@ -138,9 +152,9 @@ final class Option
 
 
     /**
-     * @param callable(T):Option $callable
+     * @param callable(T):Option<T> $callable
      *
-     * @return \Ilex\ResultOption\Option\Option
+     * @return \Ilex\ResultOption\Option\Option<T>
      */
     public function andThen(callable $callable): Option
     {
@@ -155,7 +169,7 @@ final class Option
     /**
      * @param callable(T):bool $callable
      *
-     * @return \Ilex\ResultOption\Option\Option
+     * @return \Ilex\ResultOption\Option\Option<T>
      */
     public function filter(callable $callable): Option
     {
@@ -193,6 +207,7 @@ final class Option
 
     /**
      * @param T $value
+     * @return \Ilex\ResultOption\Option\Option<T>
      */
     public function replace(mixed $value): Option
     {
@@ -216,6 +231,10 @@ final class Option
     //
     //    }
 
+    /**
+     * @return \Ilex\ResultOption\Option\Option<T>
+     * @throws \Ilex\ResultOption\Error\OptionException
+     */
     public function flatten(): self
     {
         if ($this->isNone()) {
