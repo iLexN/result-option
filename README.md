@@ -2,7 +2,7 @@
 > Just for fun, rust like enum Result and Option.
 
 [![Latest Stable Version](https://poser.pugx.org/ilexn/result-option/v/stable)](https://packagist.org/packages/ilexn/result-option)
-[![Total Downloads](https://poser.pugx.org/ilexn/result-option/downloads)](https://packagist.org/packages/ilexn/package-templateresult-option)
+[![Total Downloads](https://poser.pugx.org/ilexn/result-option/downloads)](https://packagist.org/packages/ilexn/result-option)
 
 ![GitHub Action](https://github.com/iLexN/result-option/workflows/CI%20Check/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/iLexN/result-option/badge.svg?branch=master)](https://coveralls.io/github/iLexN/result-option?branch=master)
