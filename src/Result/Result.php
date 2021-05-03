@@ -8,7 +8,6 @@ use Ilex\ResultOption\Option\Option;
 
 /**
  * @template T
- * @template T3
  */
 class Result
 {
@@ -25,13 +24,14 @@ class Result
     /**
      * @template T2
      * @param T2 $value
+     * @return \Ilex\ResultOption\Result\Result<T2>
      */
-    public static function makeOk(mixed $value): self
+    public static function makeOk(mixed $value): Result
     {
         return new self($value, true);
     }
 
-    public static function makeErr(\Throwable $throwable): self
+    public static function makeErr(\Throwable $throwable): Result
     {
         return new self($throwable, false);
     }
@@ -76,6 +76,7 @@ class Result
 
     //    public function orElse(){}
     /**
+     * @template T3
      * @param T3 $value
      *
      * @return T|T3
