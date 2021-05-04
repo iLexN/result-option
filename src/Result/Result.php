@@ -31,6 +31,11 @@ class Result
         return new self($value, true);
     }
 
+    /**
+     * @param \Throwable $throwable
+     *
+     * @return \Ilex\ResultOption\Result\Result<\Throwable>
+     */
     public static function makeErr(\Throwable $throwable): Result
     {
         return new self($throwable, false);
@@ -46,6 +51,9 @@ class Result
         return !$this->ok;
     }
 
+    /**
+     * @return \Ilex\ResultOption\Option\Option<T>
+     */
     public function ok(): Option
     {
         if ($this->isOk()) {
@@ -54,6 +62,9 @@ class Result
         return Option::none();
     }
 
+    /**
+     * @return \Ilex\ResultOption\Option\Option<T>
+     */
     public function err(): Option
     {
         if ($this->isOk()) {
