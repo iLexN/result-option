@@ -15,7 +15,7 @@
     },
     "require-dev": {
         "infection/infection": "^0.22.1",
-        "phpbench/phpbench": "1.0.0-beta1",
+        "phpbench/phpbench": "1.0.0",
         "phpunit/phpunit": "^9.5",
         "rector/rector": "^0.10.19",
         "vimeo/psalm": "^4.7"
