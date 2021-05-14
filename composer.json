@@ -14,7 +14,7 @@
         "php": ">=8.0"
     },
     "require-dev": {
-        "infection/infection": "^0.22.1",
+        "infection/infection": "^0.23.0",
         "phpbench/phpbench": "1.0.1",
         "phpunit/phpunit": "^9.5",
         "rector/rector": "^0.10.22",
