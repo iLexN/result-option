@@ -59,6 +59,7 @@ class Result
         if ($this->isOk()) {
             return Option::some($this->value);
         }
+
         return Option::none();
     }
 
@@ -70,6 +71,7 @@ class Result
         if ($this->isOk()) {
             return Option::none();
         }
+
         return Option::some($this->value);
     }
 
@@ -97,8 +99,10 @@ class Result
         if ($this->isOk()){
             return $this->value;
         }
+
         return $value;
     }
+
     //    public function unwrap_or_else{}
 
     /**
@@ -114,6 +118,7 @@ class Result
         if ($this->value instanceof \Throwable) {
             throw ResultException::customMessage($message, $this->value);
         }
+
         throw ResultException::ShouldNotHappen();
     }
 
@@ -145,6 +150,7 @@ class Result
         if ($this->isOk()) {
             throw ResultException::customMessage($message);
         }
+
         return $this->value;
     }
 
@@ -157,6 +163,7 @@ class Result
         if ($this->isOk()) {
             throw ResultException::unwrapErr();
         }
+
         return $this->value;
     }
 

@@ -76,6 +76,7 @@ final class Option
         if ($this->isNone()) {
             return false;
         }
+
         return $value === $this->value;
     }
 
@@ -88,6 +89,7 @@ final class Option
         if ($this->isSome()) {
             return $this->value;
         }
+
         throw OptionException::customMessage($message);
     }
 
@@ -100,6 +102,7 @@ final class Option
         if ($this->isSome()) {
             return $this->value;
         }
+
         throw OptionException::unwrap();
     }
 
@@ -113,6 +116,7 @@ final class Option
         if ($this->isSome()) {
             return $this->value;
         }
+
         return $value;
     }
 
@@ -124,6 +128,7 @@ final class Option
         if ($this->isSome()) {
             return $this->value;
         }
+
         return $callable();
     }
 
@@ -147,6 +152,7 @@ final class Option
         if ($this->isSome()) {
             return $option;
         }
+
         return self::none();
     }
 
@@ -183,6 +189,7 @@ final class Option
 
         return self::none();
     }
+
     //
     //    public function or(self $option)
     //    {
@@ -244,6 +251,7 @@ final class Option
         if ($this->value instanceof self) {
             return $this->value;
         }
+
         throw OptionException::flattenError();
     }
 }
