@@ -9,15 +9,15 @@ use Ilex\ResultOption\Option\Option;
 /**
  * @template T
  */
-class Result
+final class Result
 {
 
     /**
      * @param T $value
      */
     private function __construct(
-        private mixed $value,
-        private bool $ok,
+        private readonly mixed $value,
+        private readonly bool $ok,
     ) {
     }
 
