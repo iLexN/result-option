@@ -11,13 +11,13 @@
         }
     ],
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.1"
     },
     "require-dev": {
-        "infection/infection": "^0.25.3",
-        "phpbench/phpbench": "1.2.0",
+        "infection/infection": "^0.25",
+        "phpbench/phpbench": "^1.2",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "^0.12.4",
+        "rector/rector": "^0.12",
         "vimeo/psalm": "^4.13"
     },
     "config": {
