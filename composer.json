@@ -18,10 +18,13 @@
         "phpbench/phpbench": "^1.2",
         "phpunit/phpunit": "^9.5",
         "rector/rector": "^0.13",
-        "vimeo/psalm": "^4.23"
+        "vimeo/psalm": "^4.26"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
     },
     "autoload": {
         "psr-4": {

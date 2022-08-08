@@ -32,8 +32,6 @@ final class Result
     }
 
     /**
-     * @param \Throwable $throwable
-     *
      * @return \Ilex\ResultOption\Result\Result<\Throwable>
      */
     public static function makeErr(\Throwable $throwable): Result
@@ -140,7 +138,6 @@ final class Result
     }
 
     /**
-     * @param string $message
      *
      * @return T
      * @throws \Ilex\ResultOption\Error\ResultException
