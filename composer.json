@@ -18,7 +18,7 @@
         "phpbench/phpbench": "^1.2",
         "phpunit/phpunit": "^9.5",
         "rector/rector": "^0.17",
-        "vimeo/psalm": "^5.12"
+        "vimeo/psalm": "^5.13"
     },
     "config": {
         "sort-packages": true,
