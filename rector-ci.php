@@ -15,14 +15,14 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::CODING_STYLE,
         SetList::PHP_80,
         SetList::PHP_81,
-        SetList::PSR_4,
+        //SetList::PSR_4,
         SetList::EARLY_RETURN,
         SetList::NAMING,
     ]);
 
     $rectorConfig->skip([
         Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector::class,
-        Rector\Php80\Rector\FunctionLike\UnionTypesRector::class,
+        //Rector\Php80\Rector\FunctionLike\UnionTypesRector::class,
     ]);
 
 //    $parameters->set(Option::SKIP, [
