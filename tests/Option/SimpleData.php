@@ -6,7 +6,7 @@ namespace Ilex\ResultOption\Tests\Option;
 trait SimpleData
 {
 
-    public function data(): \Generator
+    public static function data(): \Generator
     {
         yield 'null' => [null];
         yield 'int' => [2];

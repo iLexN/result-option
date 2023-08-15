@@ -6,6 +6,7 @@ use Rector\Config\RectorConfig;
 use Rector\Core\Configuration\Option;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\Set\ValueObject\SetList;
+use Rector\PHPUnit\Set\PHPUnitSetList;
 
 return static function (RectorConfig $rectorConfig): void {
 
@@ -18,6 +19,9 @@ return static function (RectorConfig $rectorConfig): void {
         //SetList::PSR_4,
         SetList::EARLY_RETURN,
         SetList::NAMING,
+        PHPUnitSetList::PHPUNIT_91,
+        PHPUnitSetList::PHPUNIT_100,
+        PHPUnitSetList::ANNOTATIONS_TO_ATTRIBUTES ,
     ]);
 
     $rectorConfig->skip([
