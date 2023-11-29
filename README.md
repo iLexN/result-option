@@ -6,7 +6,7 @@
 
 ![GitHub Action](https://github.com/iLexN/result-option/workflows/CI%20Check/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/iLexN/result-option/badge.svg?branch=main)](https://coveralls.io/github/iLexN/result-option?branch=main)
-[![Infection MSI](https://badge.stryker-mutator.io/github.com/iLexN/result-option/main)](https://infection.github.io)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2FiLexN%2Fresult-option%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/iLexN/result-option/main)
 
 ## Installation
 ```sh
